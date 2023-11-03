@@ -44,11 +44,9 @@ while true; do
         echo "サービス名: $service_name"
         echo "ユーザー名: $username"
         echo "パスワード: $password"
-      # echo 'サービス名あり'
     # サービス名が保存されていなかった場合
     else
       echo 'そのサービスは登録されていません。'
-      # echo 'サービス名なし'
     fi
       ;;
     # Exitが入力された場合
