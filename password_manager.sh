@@ -28,7 +28,16 @@ while true; do
       ;;
     # Get Passwordが入力された場合
     "Get Password")
-    echo 'Get Passwordが出力されることの確認'
+    echo 'サービス名を入力してください：'
+    read service_name
+
+    # サービス名が保存されていた場合
+    if grep -q -E "^$service_name:" password_manager.txt; then
+      echo 'サービス名あり'
+    # サービス名が保存されていなかった場合
+    else
+      echo 'サービス名なし'
+    fi
       ;;
     # Exitが入力された場合
     "Exit")
